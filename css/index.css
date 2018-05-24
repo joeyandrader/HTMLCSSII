@@ -16,8 +16,9 @@
 }
 .foto-home {
     height: 200px;
-    border-radius: 10em;
-    border:.5em solid black;
+    border-radius: 10% 50% / 50% 10%;
+
+    /*border:.5em solid black;*/
 }
 .saudacao {
     padding: 3em;

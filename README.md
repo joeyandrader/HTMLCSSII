@@ -126,3 +126,155 @@ Curso HTML5 e CSS3 II: Turbinando as suas páginas : https://cursos.alura.com.br
 
 >No caso, se o DIV pai não tivesse position definido, o div filho iria se referenciar pelo BODY mesmo. Se caso o div pai não tivesse position definido, e se ele também fosse envolvido por outro div com position, o div filho iria se referenciar por este terceiro div.
 
+# 3.0 Bordas arredondadas e outras novidades do CSS3
+
+## 3.1 Border Radius
+>Uma outra propriedade Incrivel presente no css3, é como podemos arredondar bordas.
+>Quando usamos uma tag tipo a "**div**" notamos que é uma caixa um quadrado.
+>Podemos facilmente mudar isso com novas propriedade "**border-radius**"
+
+>Entao no CSS dizemos que queremos arrendondar a borda da "**div**" com o "**border-radius**".
+
+>Exemplo:
+ ```html
+<style>
+  div {
+    border-radius: 10px;
+}
+  </style>
+ ```
+ >Então fica assim:
+
+ <p align="center">
+<img src="http://i.imgur.com/cAyGxCu.jpg" alt="exemplo de borda arredondada" width="200">
+ </p>
+
+ ## 3.2 Como os navegadores se comporta
+
+ >Quando pensamos em criar nosso site e por ate mesmo um estilo legal como o border-radius, pensamos, será que isso vai funcionar em todos os navegadores?.
+
+ >Como será que os navegadores implementaram essas funcionalidades?
+
+ >A gente como desenvolver queremos que nosso site funcione em todos os navegadores.
+
+ >para isso basta apenas usar:
+
+ ```
+ Para o google Chrome
+
+ -webkit-border-radius:
+ ```
+
+ ```
+ Para o FireFox
+ 
+ -moz-border-radius
+ ```
+
+ ```
+ Para o Explorer
+ 
+ -ms-border-radius
+ ```
+
+ ```
+ Para o Opera
+ 
+ -o-border-radius
+ ```
+
+ ```
+ Para o Safari
+ 
+  -webkit-border-radius
+ ```
+>Muitos navegadores ja estao adaptando para uma so funcionalidade. Os três prefixos principais se resumem em: -webkit-, -ms- e -moz-.
+
+>Usando dessa maneira.
+
+```
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+-ms-border-radius: 10px;
+-o-border-radius: 10px;
+border-radius: 10px;
+```
+>Garante Funcionalidade em todos os navegadores,e ate mesmo para alterações futuras. Sem precisar alterar nada no seu codigo.
+
+### Outra pergunta: mesmo assim, ainda se faz necessário deixar o código cheio desses prefixos?
+> Na verdade não, tratando-se do border-radius só é preciso:
+> ```  
+>-webkit-border-radius: 10px;
+>-moz-border-radius: 10px;
+>border-radius: 10px;
+>```
+
+>Outros exemplos mais explicativo:
+
+ <p align="center">
+<img src="https://i.stack.imgur.com/FnIqF.png" alt="exemplo de borda Elipticas" width="450" height="150">
+ </p>
+
+## 3.3 Propriedade elípticas.
+
+>Como vimos, o border-radius nos permite fazer não apenas bordas redondas como também bordas elípticas.
+
+>Como exemplo abaixo:
+
+ <p align="center">
+<img src="http://caelum-online-public.s3.amazonaws.com/avancando-html-css/foto-torta.jpg" alt="exemplo de borda Elipticas" width="200">
+ </p>
+
+ > A sintaxe para o border-radius criar bordas elípticas é a seguinte:
+
+ ```
+ border-radius: <raios na horizontal> / <raios na vertical>;
+
+ Definido seria assim
+
+ border-radius: 10% 50% / 50% 10%
+ ```
+
+ ## 3.4 Propriedade fictícia.
+
+ >Imagine que uma nova especificação do CSS está surgindo para permitir a criação de elementos 3D na página
+
+ >Seria nescessario a propriedade "**depth**" (profundidade)
+
+>Se quisermos testar essa propriedade num site nosso, fazendo um elemento com a classe botao ter uma profundidade de 10px, como deve ser a declaração para conseguirmos testá-la no maior número de usuários possível?
+ >```html
+ ><style>
+  >   .botao {
+   >  -webkit-depth: 10px;
+   >  -moz-depth: 10px;
+   >  depth: 10px;
+>       }
+ >  </style>
+ >```
+
+ ## 3.5 Prefixos em valores.
+
+ > Com o valor "**calc**" conseguimos fazer calculos no css3.
+
+ >Podemos fazer, por exemplo, com que um elemento tenha metade da largura da tela menos 10 pixels:
+
+ ```html
+ <style>
+   div {
+    width: calc(50% - 10px);
+   }
+</style>
+ ```
+ >E para Suportar bem nos navegadores, apenas atribuir os codigo como exemplo abaixo.
+
+ ```html
+ <style>
+ div {
+    width: -webkit-calc(50% - 10px);
+    width: -moz-calc(50% - 10px);
+    width: calc(50% - 10px);
+}
+</style>
+ ```
+ 
+ >Mais exemplos: <a href="https://user-images.githubusercontent.com/24694674/28215628-56c9e7da-68b7-11e7-94d0-a0c44ac5d026.png">Exemplo do calc</a>

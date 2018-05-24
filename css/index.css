@@ -2,7 +2,7 @@
     background-color:  #851944;
     border-bottom: 0.5em solid black;
     text-align: center;
-    padding: 1em;
+    padding: 2em;
 }
 .titulo-principal h1{
     font-size: 2em;
@@ -101,10 +101,15 @@
     color: #FFF;
     border-bottom: 10px solid #851944;
     padding: 7em;
+    position: relative;
 }
 .blog li a {
     color: #FCF;
     margin:5em
+}
+.blog li {
+    width: 50%;
+    padding: 0.2em;
 }
 .blog h2 {
     font-size: 3em;
@@ -112,6 +117,97 @@
 .blog a {
     line-height: 2;
 }
+.inicial-post {
+    color: #000;
+    background:#F2FFFC;
+    padding: 1em;
+    position: absolute;
+    top: 8em; 
+    right: 8em;
+    height: 6em;
+    width: 45em;
+    left: 32%;
+}
+
+.palavra-home {
+    font-family: 'Shadows Into Light', cursive;
+    color: #D5447E;
+    font-size: 1.5em;
+}
+
+.eficiencia {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+}
+.boas-praticas {
+    position: absolute;
+    top: 50%;
+    right: 75%;
+}
+.codigo-limpo {
+    position: absolute;
+    top: 30%;
+    right: 85%;
+}
+
+.css3 {
+    position: absolute;
+    top: 35%;
+    right: 65%;
+    
+}
+
+.html5 {
+    position: absolute;
+    top: 35%;
+    left: 85%;
+}
+
+.javascript {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+
+.acessibilidade {
+    position: absolute;
+    top: 20%;
+    right: 65%;  
+}
+
+.responsivo {
+    position: absolute;
+    top: 6%;
+    right: 80%; 
+}
+.otimizacoes {
+    position: absolute;
+    top: 50%;
+    left: 62%;
+}
+.agilidade {
+    position: absolute;
+    top: 6%;
+    right: 62%; 
+}
+.design {
+    position: absolute;
+    top: 28%;
+    left: 65%;
+}
+
+.mais-recente {
+    background-color: #F2FFFC;
+}
+.mais-recente a {
+    color: #F26;
+}
+
+header {
+    position: relative;
+}
+
 footer {
     background-color: #000;
     color: #FFF;

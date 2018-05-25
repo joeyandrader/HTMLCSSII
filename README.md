@@ -279,6 +279,6 @@ border-radius: 10px;
 </style>
  ```
  
- >Mais exemplos:  [Exemplo de calc](https://user-images.githubusercontent.com/24694674/28215628-56c9e7da-68b7-11e7-94d0-a0c44ac5d026.png){:target="_blank":}
+ >Mais exemplos:  [Exemplo de calc](https://user-images.githubusercontent.com/24694674/28215628-56c9e7da-68b7-11e7-94d0-a0c44ac5d026.png)
 
 

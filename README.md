@@ -14,13 +14,13 @@ Curso HTML5 e CSS3 II: Turbinando as suas páginas : https://cursos.alura.com.br
 
 ### Como por exemplo:
 ### Podemos Usar as duas formas
-```html
+```css
  p {
    font-size: 100%;
    font-family: "arial", sans-serif;
  }
 ```
-```html
+```css
  p {
    font-size: 1em;
    font-family: "arial", sans-serif;

@@ -84,7 +84,7 @@ Curso HTML5 e CSS3 II: Turbinando as suas páginas : https://cursos.alura.com.br
 >Existem 3 tipos de valores que usamos na propriedade position: relative, absolute e fixed.
 
 ### 2.1.1 Position Fixed
->Essa propriedade faz com que o elemento que voce deseja ficará fixada em um determinado local da pagina web na qual voce definir...
+>Essa propriedade faz com que o elemento que voce deseja ficará fixada em um determinado local da pagina web na qual voce definir. E conforme você navega na página o elemento continua onde você o colocou.
 
 >Definindo isso:
 
@@ -125,6 +125,8 @@ Curso HTML5 e CSS3 II: Turbinando as suas páginas : https://cursos.alura.com.br
 </p>
 
 >No caso, se o DIV pai não tivesse position definido, o div filho iria se referenciar pelo BODY mesmo. Se caso o div pai não tivesse position definido, e se ele também fosse envolvido por outro div com position, o div filho iria se referenciar por este terceiro div.
+
+>Ou seja, ele se baseia no parente mais próximo com position (até chegar ao body caso nada tenha).
 
 # 3.0 Bordas arredondadas e outras novidades do CSS3
 
@@ -245,10 +247,10 @@ border-radius: 10px;
  >```html
  ><style>
   >   .botao {
-   >  -webkit-depth: 10px;
-   >  -moz-depth: 10px;
-   >  depth: 10px;
->       }
+   >      -webkit-depth: 10px;
+   >      -moz-depth: 10px;
+   >      depth: 10px;
+   >  }
  >  </style>
  >```
 
@@ -256,7 +258,7 @@ border-radius: 10px;
 
  > Com o valor "**calc**" conseguimos fazer calculos no css3.
 
- >Podemos fazer, por exemplo, com que um elemento tenha metade da largura da tela menos 10 pixels:
+ >Podemos fazer, por exemplo, com que um elemento tenha metade da largura do item pai menos 10 pixels:
 
  ```html
  <style>
@@ -277,4 +279,6 @@ border-radius: 10px;
 </style>
  ```
  
- >Mais exemplos: <a href="https://user-images.githubusercontent.com/24694674/28215628-56c9e7da-68b7-11e7-94d0-a0c44ac5d026.png">Exemplo do calc</a>
+ >Mais exemplos:  [Exemplo de calc](https://user-images.githubusercontent.com/24694674/28215628-56c9e7da-68b7-11e7-94d0-a0c44ac5d026.png){:target="_blank":}
+
+

@@ -385,4 +385,17 @@ div {
 - translateY
 - translateZ
 
+>Exemplo com codigo:
+
+```css
+div {
+    transform: translateX(2px);
+}
+div {
+    transform: translateY(4px);
+}
+div {
+    transform: translateZ(6px);
+}
+```
 **Breve mais conteudo sobre.. porque ate eu nao entendi muito bem so sei que serve para isso ai**

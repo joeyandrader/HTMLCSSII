@@ -431,7 +431,7 @@ h1 {
 
  >Podemos aplicar esse efeito em qualquer texto do nosso site.
 
-## 5.1 Box-Shadow.
+## 5.2 Box-Shadow.
 
 >Outra propriedade que funciona igual o ```text-shadow``` é o ```box-shadow```, que atribui sombreamento aos elementos de caixa.
 
@@ -481,7 +481,7 @@ h1 {
  
  - ```Inset``` : Faz com que o efeito de sombreamento seja dentro do elemento caixa. Funciona apenas com o ```box-shadow```.
 
- ## Opacidade e cores semitransparentes.
+ ## 5.3 Opacidade e cores semitransparentes.
 
  >Outro elemento interessante de efeito para o nosso HTML é o ```opacity```.
 

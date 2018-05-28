@@ -1,6 +1,8 @@
 # HTMLCSSII
 Curso HTML5 e CSS3 II: Turbinando as suas páginas : https://cursos.alura.com.br/course/avancando-html-css
 
+
+
 <p align="center">
   <img src="https://givingdata.com/wp-content/uploads/2013/07/html-css-js.png">
 </p>
@@ -281,4 +283,106 @@ border-radius: 10px;
  
  >Mais exemplos:  [Exemplo de calc](https://user-images.githubusercontent.com/24694674/28215628-56c9e7da-68b7-11e7-94d0-a0c44ac5d026.png)
 
+ # Aula 4: Transformações.
 
+ >Vemos que temos podemos transformar algumas coisas no nosso HTML, como um cubo por exemplo.
+
+ > Para isso temos as propriedades ```transform``` e ```perspective```.
+
+ ## 4.1 A propriedade transform.
+
+ >O ```transform```: Faz com que podemos girar, dimensionar, inclinar ou traduzir um determinado elemento, e é uma propriedade poderosa, mas também muito simples de usar. Basta especificar o tipo de transformação que queremos fazer com o objeto:
+
+ >Tem como propriedades como:
+
+ - rotate.
+ - scale.
+ - skew.
+ - translate.
+
+ ```css
+ div {
+    transform: ...;
+}
+ ```
+ >Exemplos :
+
+ - Com o ```rotate```
+- Aqui o objeto está sendo rotacionado em 30 graus:
+
+```css
+div {
+    transform: rotate(30deg);
+}
+ ```
+
+ <p align="center">
+<img src="http://i.imgur.com/vmAnwrg.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+- Com o ```scale```
+- Aqui o objeto aumenta em 1,5 vezes:
+
+```css
+div {
+    transform: scale(1.5);
+}
+```
+
+  <p align="center">
+<img src="http://i.imgur.com/Gn7nntI.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+ - Com o ```skew```
+ - Aqui os ângulos do objeto crescem ou diminuem em 20 graus:
+
+ ```css
+div {
+    transform: skew(20deg);
+}
+```
+
+  <p align="center">
+<img src="http://i.imgur.com/T3Es5XP.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+ - Com o ```translate```
+ - Aqui o objeto foi transladado 10 pixeis para a direita e 50 para baixo:
+
+ ```css
+div {
+    transform: translate(10px, 50px);
+}
+```
+
+ <p align="center">
+<img src="http://i.imgur.com/yaGxb3m.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+ >Lembrando que como essa propriedade é relativamente nova, talvez seja interessante acrescentar antes dela o prefixo BETA, para versões mais antigas de navegadores:
+
+ ```css
+div {
+    -webkit-transform: skew(20deg)
+        rotate(30deg)
+        scale(1.2);
+    transform: skew(20deg)
+        rotate(30deg)
+        scale(1.2);
+}
+ ```
+
+ ## 4.2 Transformações 3D / propriedade perspective.
+
+ >Com o 3D trabalhamos em 3 eixos para definir o tamanho de nossos objetos: ```x```, ```y``` e ```z```.
+
+  <p align="center">
+<img src="http://i.imgur.com/KH7xOki.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+ >Para isso colocamos:
+- translateX
+- translateY
+- translateZ
+
+**Breve mais conteudo sobre.. porque ate eu nao entendi muito bem so sei que serve para isso ai**

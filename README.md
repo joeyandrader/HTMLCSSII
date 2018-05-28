@@ -399,3 +399,136 @@ div {
 }
 ```
 **Breve mais conteudo sobre.. porque ate eu nao entendi muito bem so sei que serve para isso ai**
+
+# Aula 5 :  Sombras e opacidade.
+
+>Temos formas de sombreamentos e efeitos interessante no nosso CSS, para deixar nosso HTML bem mais interessante. Dois deles são as sombras e a opacidade. Eles destacam os elementos ou dão efeito de iluminação e tridimensionalidade.
+
+## 5.1 Text-Shadow.
+
+>O primeiro que vamos falar é sobre o ```text-shadow```: Que recebe algumas configurações para dar impressão de tridimensionalidade, perspectiva, difusão de luz, além de escolher a cor dessa sombra.
+
+- exemplo como no meu codigo HTML.
+
+```css
+h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    text-shadow: 5px 5px #000;
+}
+```
+- No codigo acima temos o os parametros , ```5px``` ```5px``` e ```#000```.
+- o primeiro parametro ```5px``` quer dizer sombra para direita.
+- o segundo paramentro ```5px``` quer dizer para baixo.
+- o terceiro parametro ```#000``` é a corda sombra.
+- se inverter o ```5px``` para ```-5px``` ja da para perceber ne ? esquerda e para cima.
+
+>Terá esse efeito.
+
+<p align="center">
+<img src="http://i.imgur.com/Xx8vEXB.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+ >Podemos aplicar esse efeito em qualquer texto do nosso site.
+
+## 5.1 Box-Shadow.
+
+>Outra propriedade que funciona igual o ```text-shadow``` é o ```box-shadow```, que atribui sombreamento aos elementos de caixa.
+
+- Como Exemplo:
+
+```css
+.foto-home {
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 1em #000;
+}
+```
+
+
+>Terá esse efeito:
+
+<p align="center">
+<img src="http://i.imgur.com/fl9RNe1.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+>O Mais interessante é poder atribuir esses efeitos em botoes de links.
+
+- Por Exemplo:
+
+```css
+.botao-index {
+    font-size: 1.25em;
+    background-color: #851944;
+    color: #FFF;
+    padding: .5em;
+    border: .2em solid black;
+    width: 40ch;
+    margin: 2em auto;
+    display: block;
+    text-align: center;
+    box-shadow: 0 0 1em #000, inset 0 0 .5em #FFF;
+}
+``` 
+
+>Terá esse efeito:
+
+<p align="center">
+<img src="http://i.imgur.com/aWQP8yI.jpg" alt="exemplo de borda Elipticas" width="380" height="120">
+ </p>
+
+ - Notamos que a uma nova propriedade no ``` box-shadow```  que seria o ```"inset"```  
+ 
+ - ```Inset``` : Faz com que o efeito de sombreamento seja dentro do elemento caixa. Funciona apenas com o ```box-shadow```.
+
+ ## Opacidade e cores semitransparentes.
+
+ >Outro elemento interessante de efeito para o nosso HTML é o ```opacity```.
+
+ >A opacidade faz com que podemos deixar o nosso elemento transparente invisivel, semi-transparente ou totalmente visivel.
+
+ - Exemplos:
+
+ ```css
+ .rodape-pagina {
+    ...
+    opacity: .3;
+}
+ ```
+
+- Ficaria então assim:
+
+<p align="center">
+<img src="http://i.imgur.com/J5lvghX.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+ 
+ - Definimos o valor de 0.3 de opacidade.
+
+ >Nota que o rodapé mais a fonte estao com opacidade de 0.3.
+
+ - Os valores que podemos passar varia de ```0``` a ```1```. Onde ```0``` totalmente invisivel e ```1``` totalmente visivel.
+
+ >So que temos um problema em relação a isso. quando definimos um valor de ```opacity``` em um elemento cujo esse elemento for pai, ele ira aplicar a transparencia em todos os elemtos ou seja, nos filhos.
+
+ - Para isso temos uma outra propriedade interessante também para aplicar esse efeito de transparencia.
+
+ - exemplo
+
+ ```css
+.rodape-pagina {
+    background-color: rgba(0, 0, 0, .3);
+    ...
+}
+ ```
+<p align="center">
+<img src="http://i.imgur.com/ai1Byr7.jpg" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+ - Nota que so o background do rodapé está com opacidade de 0.3.
+
+ >O que usamos é que nem quando definimos uma cor para nosso texto usando o ```RGB```. So que com mais um adicional ```RGBA``` o ```A``` quer dizer o ```ALPHA``` da cor, o que define a transparencia a opacidade da cor.
+
+ <p align="center">
+<img src="https://www.techfry.com/images/webmaster/css-rgba.png" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+

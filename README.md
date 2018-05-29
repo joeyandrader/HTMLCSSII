@@ -532,3 +532,137 @@ h1 {
 <img src="https://www.techfry.com/images/webmaster/css-rgba.png" alt="exemplo de borda Elipticas" width="350" height="250">
  </p>
 
+# Aula 6 : Gradientes.
+
+ > Um efeito super interessante é o Gradient color. Com ele conseguimos criar varios efeitos de cores, Combinar uma cor a outra e etc.
+
+ - No CSS, podemos definir os tipos de cores e combinações que queremos por, com isso usamos o ```linear-gradient()```, que receberá alguns parâmetros:
+ 
+ >Como Exemplos:
+
+ ```css
+ .titulo-principal {
+     ...
+    background-image: linear-gradient(to bottom, #F00, #000);
+}
+ ```
+ - O ```"to bottom"``` indica que o gradiente acontece de cima para baixo. Logo depois escolhemos as cores dos gradientes, neste caso do vermelho ```(#F00)``` ao preto ```(#000)```. Como resultado temos:
+
+  <p align="center">
+<img src="http://i.imgur.com/EkbMXxs.jpg" alt="exemplo de borda Elipticas" width="500" height="150">
+ </p>
+
+ >Podemos acrescentar também mais de uma cor alem dessas duas que definimos..
+
+ - Exemplo:
+
+ ```css
+.titulo-principal {
+    ...
+    background-image: linear-gradient(to bottom, #F00, #888, #000);
+}
+ ```
+  <p align="center">
+<img src="http://i.imgur.com/wUvNYRc.jpg" alt="exemplo de borda Elipticas" width="500" height="150">
+ </p>
+
+ >Alem de que podemos definir uma transição de cor entre outra. Quando queremos que a mudança de vermelho para cinza ocorra a uns 80% da altura da imagem, de cima para baixo, deve ficar mais ou menos assim:
+
+  - Exemplo:
+
+ ```css
+.titulo-principal {
+    background-image: linear-gradient(to bottom, #F00, #888 80%, #000);
+}
+ ```
+  <p align="center">
+<img src="http://i.imgur.com/F9jpizs.jpg" alt="exemplo de borda Elipticas" width="500" height="150">
+ </p>
+
+ > E assim temos esses efeitos entre as cores.
+
+ ## 6.1 Background size gradient.
+
+ >também podemos redimencionar nosso gradient de cores ou ate mesmo imagens.
+
+ - Usamos a propriedade ```background-size```.
+ 
+ ```css
+ .titulo-principal {
+     ...
+    background-size : 100% 200px;
+}
+ ```
+
+   <p align="center">
+<img src="http://i.imgur.com/zaBRjxT.jpg" alt="exemplo de borda Elipticas" width="500" height="150">
+ </p>
+
+ ## 6.2 Background repeat gradient.
+
+ >O gradiente se repete automaticamente. Podemos desligar esse comportamento utilizando a propriedade background-repeat:
+
+  - Usamos a propriedade ```background-repeat```.
+ 
+ ```css
+.titulo-principal {
+    ...
+    background-repeat: no-repeat;
+}
+ ```
+
+   <p align="center">
+<img src="http://i.imgur.com/ledOrSZ.jpg" alt="exemplo de borda Elipticas" width="500" height="150">
+ </p>
+
+ ## 6.3 Background attachment gradient.
+
+ >Temos também a propriedade background-attachment, com o valor "fixed". Ela dá aquele efeito de paralaxe na imagem ou na textura do background. É como se elas estivessem fixas à tela do computador.
+
+ ```css
+.titulo-principal {
+    ...
+    background-attachment: fixed;
+}
+ ```
+
+ ## 6.4 Background position gradient.
+
+ >Outra propriedade interessante é o ```background-position```que podemos definir uma posição para o nosso gradient e com ele criar varios efeitos legais.
+
+ - exemplo:
+
+ ```css
+    div {
+        min-height: 100%;
+        background-color: black;
+        background-image: linear-gradient(to right, black, #C00, black);
+        background-repeat: no-repeat;
+        background-size: 80% 5px;
+        background-position: 50% 50%;
+    }
+ ```
+
+> com esse exemplo temos o resultado de:
+
+   <p align="center">
+<img src="http://caelum-online-public.s3.amazonaws.com/avancando-html-css/gradiente-exercicio-bg.png" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>
+
+- Note que definimos 50%  e 50% assim centralizando na pagina.
+
+## 6.5 radiais gradient.
+
+>O navegador também é capaz de gerar gradientes radiais, nos quais a cor muda a partir de um ponto em todas as direções.
+
+```css
+div {
+    ...
+    background-image: radial-gradient(yellow, red);
+}
+```
+- Ficaria assim:
+
+<p align="center">
+<img src="http://caelum-online-public.s3.amazonaws.com/avancando-html-css/gradiente-radial.png" alt="exemplo de borda Elipticas" width="350" height="250">
+ </p>

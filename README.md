@@ -666,3 +666,89 @@ div {
 <p align="center">
 <img src="http://caelum-online-public.s3.amazonaws.com/avancando-html-css/gradiente-radial.png" alt="exemplo de borda Elipticas" width="350" height="250">
  </p>
+
+# Aula 7 Seletores avançados do CSS.
+
+> Alem de seletores como classes e id's. Temos outros seletores que fazem varias coisas interessantes quando queremos selecionar um elemento especificos.
+
+## 7.1 A ~ B:
+
+> Quando queremos selecionar um segundo item em diante . Tipo uma lista.
+
+- Exemplo :
+
+```css
+li ~ li {
+    margin-top: 1em;
+}
+```
+- Nesta Lista de ```<li>``` a segunda linha em diante vai receber o ```margin-top: 1em;```.
+
+## 7.2 A + B:
+
+>Quando queremos modificar por exemplo um paragrafo depois de um elemento.
+
+- Exemplo :
+
+```html
+ <img>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+```
+
+- Temos acima o HTML
+
+```css
+p {
+    text-indent: 4ch;
+}
+
+img + p {
+    text-ident: 0;
+}
+```
+- No CSS temos todos os paragrafos com ```4ch``` de indentação. Mas Quando inserimos ```img + p``` apenas o primeiro paragrafo não terá a indentação.
+- 
+## 7.3 A > B:
+
+>Quando queremos editar todos os filhos diretos do primeiro elemento, sem modificar os elementos mais internos.
+
+- Exemplo:
+
+```html
+<div>
+    <p>...</p>
+    <blockquote>
+        <p>...</p>
+    </blockquote>
+    <p>...</p>
+</div>
+```
+
+- Temos esse HTML acima: com esse CSS.
+
+```css
+ div > p {
+     color: red;
+ }
+```
+
+- Apenas os paragrafos dentro da ```<div>```será afetado com a cor vermelha.
+
+```html
+<div>
+    <p>AFETADO PELO VERMELHO</p>
+    <blockquote>
+        <p>NAO AFETADO PELO VERMELHO</p>
+    </blockquote>
+    <p>AFETADO PELO VERMELHO</p>
+</div>
+```
+
+> Podemos combinar também os seletores:
+
+```css
+    .noticia > h1 + p
+```
+- Aqui estamos pegando todos os títulos "h1" dentro da classe ".noticia" e os parágrafos imediatamente depois desses "h1".

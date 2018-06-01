@@ -44,6 +44,12 @@
 background-size: 20px 20px;
 background-attachment: fixed;
    }
+   .navegacao-site a:hover {
+	   color: #8B1C62;
+   }
+   .navegacao-site a:focus {
+	text-shadow: 0 0 2px pink;
+}
    aside h1 {
    	font-size: 30px;
    	margin-bottom: 25px;

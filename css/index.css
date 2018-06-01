@@ -128,7 +128,8 @@
 }
 .blog li a {
     color: #FCF;
-    margin:5em
+    padding:.5em;
+    display: block;
 }
 .blog li {
     width: 50%;
@@ -140,7 +141,7 @@
 .blog a {
     line-height: 2;
 }
-.inicial-post {
+.blog .inicial-post {
     color: #000;
     background:#F2FFFC;
     padding: 1em;
@@ -150,8 +151,17 @@
     height: 6em;
     width: 45em;
     left: 32%;
+    display: none;
 }
-
+.blog a:hover + .inicio-post,
+.blog a:focus + .inicio-post {
+    display: block;
+}
+.blog a:hover,
+.blog a:focus {
+    background-color: #F2FFFC;
+    color: #F26;
+}
 .palavra-home {
     font-family: 'Shadows Into Light', cursive;
     color: #D5447E;

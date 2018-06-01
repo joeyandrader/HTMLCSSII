@@ -42,6 +42,12 @@ body {
 .menu-navegacao a {
 	color: #FFF;
 }
+.menu-navegacao a:hover {
+	color:#8B1C62;
+}
+.menu-navegacao a:focus {
+	text-shadow: 0 0 2px pink;
+}
 .menu-navegacao h1{
 	font-size: 30px;
 	margin-bottom: 25px;

@@ -753,9 +753,9 @@ img + p {
 ```
 - Aqui estamos pegando todos os títulos "h1" dentro da classe ".noticia" e os parágrafos imediatamente depois desses "h1".
 
-# Aula 7 : Pseudoclasses.
+# Aula 8 : Pseudoclasses.
 
-## 7.1 Classes Estruturais:
+## 8.1 Classes Estruturais:
 
 - :nth-child(odd) **Linhas ímpares**
 - :nth-child(even) **Linhas pares**
@@ -766,7 +766,7 @@ img + p {
 
 
 
-## 7.2 Classes Dinâmicas:
+## 8.2 Classes Dinâmicas:
 
 - :hover
 - :focus

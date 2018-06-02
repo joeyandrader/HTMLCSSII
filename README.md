@@ -759,16 +759,155 @@ img + p {
 
 - :nth-child(odd) **Linhas ímpares**
 - :nth-child(even) **Linhas pares**
-- :nth-child(3) **Terceira linha**
-- :first-child **Primeira Linha**
-- :last-child **Ultima Linha**
-- :nth-of-type
+
+>Quando criamos uma tabela e queremos atribuir cores a determinado elemento da tabela sem que precisar por classes em cada ```<tr>```, podemos ultilizar os pseudoclasses como mostrado acima.
+
+- Ficaria assim a tabela :
+
+```html
+    
+    <table>
+        <tr>...</tr>
+        <tr>...</tr>
+        <tr>...</tr>
+        <tr>...</tr>
+        <tr>...</tr>
+    </table>
+    
+```
+- usando os pseudoclasses
+
+```css
+    tr:nth-child(odd) {
+        Linhas impares  
+        ... 
+    }  
+    tr:nth-child(even) {
+        Linhas pares
+        ...
+    } 
+```
+
+> Podemos usar também outra forma de atribuir estilo para um elemento. 
+
+ - Na linguagem que estamos usando, generalizamos essas pseudoclasses com ```":nth-child()"```. Dessa maneira, podemos estilizar não só as linhas pares ou ímpares:
+
+ > Podemos inserir forma dentro do ```":nth-child()"```.
+
+ > como nth-child(2n) que nada mais é do que as linhas pares. 
+ 
+ > Ou nth-child(2n+1), que são as ímpares.
 
 
+ -  ```:nth-child(xn + c)```
 
+ - **X** é a periodicidade, de quantos em quantos elementos será aplicado o estilo;
+ - **C** é o ponto de partida;
+ - **N** é a variável, que começa em 0 (zero).
+
+> Mais pseudosclasses
+- ```:first-child``` **Primeira Linha**
+
+> Pega o primeiro elemento, (a tabela que é o primeiro filho)
+
+```css
+tr:first-child (a tabela é pai e "first-child" é seu primeiro filho)
+```
+- E o ```:last-child``` que pega a sua **Ultima Linha**.
+
+
+ > Breve edit**
+- ```:nth-of-type```
 ## 8.2 Classes Dinâmicas:
+
+ >Outa forma interessante de classes é usando esses 4 elementos abaixo:
 
 - :hover
 - :focus
 - :active
 - :checked
+
+ ### 8.2.1 **hover**
+
+> Quando usamos o ```hover``` teremos uma transoformação no nosso estilo ao passar com o mouse no elemento..
+- Exemplo:
+
+```html
+    <a href="#" >Aqui temos um hover </a>
+```
+
+```css
+    a {
+        color: black;
+    }
+    a:hover {
+        color: red;
+    }
+```
+> A cor do link padrao definido com ```preto```. Ao passar o mouse em cima do link ela mudarar para ```Vermelho```.
+> 
+### 8.2.2 **focus**
+
+>Quando usamos o ```focus``` teremos uma transformação no nosso estilo, ao clicar no link ele terar um focus conforme definido na folha de estilo...
+
+```html
+    <a href="#" >Aqui temos um focus </a>
+```
+
+```css
+    a {
+        color: black;
+    }
+    a:hover {
+        color: red;
+        font-size: 20px;
+    }
+```
+> A cor do link padrao definido com ```preto```. Ao passar o mouse em cima do link ela mudarar para ```Vermelho``` e terá um tamanho de ```20px``` enquanto selecionado.
+
+### 8.2.3 **active** 
+
+>Quando usamos o ```active``` ativamos o elemento. Por exemplo, quando clicamos em um link e não soltamos o botão do mouse. Nesse momento, estamos ativando a ação do elemento. Esse estado é ativado também quando navegamos pelos links pelo teclado utilizando o TAB.
+
+```html
+    <a href="#" >Aqui temos um focus </a>
+```
+
+```css
+    a {
+        color: black;
+    }
+    a:active {
+        color: red;
+        font-size: 20px;
+    }
+```
+> A cor do link padrao definido com ```preto```. Ao passar o mouse em cima do link ela mudarar para ```Vermelho``` e terá um tamanho de ```20px``` enquanto selecionado com o mouse, ao soltar o mouse do link ele volta para o padrao.
+
+### 8.2.4 **checked**
+
+>Quando usamos o ```checked``` teremos uma transformação no nosso estilo, ao clicar em uma tag do tipo ```input``` , ```radio```, teremos uma verificação.
+
+```html
+     <div>
+        <input type="checkbox" name="my-checkbox" id="opt-in">
+        <label for="opt-in">Checked</label>
+    </div>
+```
+
+```css
+div,
+
+input {
+  color: black;
+}
+
+input:checked + label {
+  color: red;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px hotpink;
+}
+```
+>Por padrao o ```checkbox``` esta com a cor ```preta```, ao clicar no ```checkbox``` terá uma borda ```rosa```, e uma cor de texto ```vermelho```.

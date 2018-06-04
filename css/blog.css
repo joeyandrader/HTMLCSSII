@@ -62,11 +62,35 @@ background-attachment: fixed;
    	display: inline-block;
    }
    .icones-sociais a {
-   	display: block;
-   	width: 40px;
-   	height: 40px;
-   	text-indent: -9999px; /* pode usar assim para esconder a fontes ou  font-size: 0px; */
+	display: block;
+	width: 40px;
+	height: 40px;
+    text-indent: -9999px; /* pode usar assim para esconder a fontes ou  font-size: 0px; */
+	position: relative;
    }
+   .icones-sociais a:hover::after,
+   .icones-sociais a:focus::after {
+	   content: attr(data-tooltip);
+	   position: absolute;
+	   top: 100%;
+	   right: 0;
+	   text-indent: 0;
+	   width: 300%;
+	   background: black;
+	   font-size: .75em;
+	   border-radius: 10px;
+   }
+	.icones-sociais a:hover::before,
+	.icones-sociais a:focus::before {
+		content: '';
+		width: 1em;
+		height: 1em;
+		background-color: black;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translateY(.5em) rotate(45deg);
+	}
   .github {
       background-image: url(../img/github.png);
    }

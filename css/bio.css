@@ -33,6 +33,14 @@
 		text-align: justify;
 		font-family: "Times New Roman", serif;
 	}
+	.container > p::first-letter {
+		font-size: 200%;
+		font-weight: bold;
+		color: #3C1D3D;
+		text-shadow: 1px 1px #000;
+		margin-right: .2ch;
+		line-height: 1;
+	}
 	blockquote {
 		background-color: #D9E5E3;
 		padding: 1em;
@@ -40,6 +48,9 @@
 		width: 30ch;
 		margin: 1em 2em;
 		box-sizing: border-box;
+	}
+	blockquote p {
+		position: relative;
 	}
 	blockquote:hover {
 		box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
@@ -58,6 +69,13 @@
 	}
 	blockquote:nth-of-type(even):hover {
 		transform: scale(1.2) rotate(-5deg);
+	}
+	blockquote:before {
+		content: '“';
+		font-size: 10em;
+		position: absolute;
+		color: #bbb;
+		line-height: .6;
 	}
 	aside {
 		background-color: #3C1D3D;

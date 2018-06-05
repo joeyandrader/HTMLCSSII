@@ -911,3 +911,72 @@ input[type="checkbox"]:checked {
 }
 ```
 >Por padrao o ```checkbox``` esta com a cor ```preta```, ao clicar no ```checkbox``` terá uma borda ```rosa```, e uma cor de texto ```vermelho```.
+
+# Aula 9 : Pseudoelementos
+
+> Assim como o ```pseudo-classe```, o ```Pseudo-elementos``` são adicionados aos seletores mas em vez de descrever um estado especial, eles permitem que você aplique estilos em certas partes de um documento.
+
+## 9.1 Tipos de pseudo-elementos
+
+### 9.1.1 **first-letter**
+
+- O ```::first-letter``` permiter pegar a primeira letra do conteudo de um elemento. Podemos usar esse conteudo ate mesmo para destacar uma letra inicial de um texto. Como por exemplo:
+- 
+
+```html
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua.
+</p>
+
+```
+- NO CSS FICARIA.
+
+```css
+    p::first-letter {
+        color: red;
+        font-size: 32px;
+    }
+
+```
+- Entao a palavra ```Lorem```, teria o ```"L"``` destacado em vermelho.
+
+### 9.1.2 **before**
+
+- O ```::before``` cria um falso elemento que nos permite adicionar conteúdo antes do conteúdo do elemento selecionado. como exemplo :
+
+```html
+
+    <div>
+        Aqui um texto junto com o before antes
+    </div>
+
+```
+- NO CSS
+
+```css
+    div::before {
+        content: “pseudo-elemento ::before”;
+        color: blue;
+    }
+```
+
+- Nesse caso a palavra dentro do ```before``` na parte do ```content``` está aparecendo antes do texto e na cor ```azul``` na tag ```<div>```.
+
+### 9.1.3 **after**
+
+- O ```::after``` Também cria um falso elemento que nos permite adicionar conteúdo ao elemento selecionado, so que no final do elemento conteudo. Como por exemplo :
+
+```html
+    <div>
+        texto que fica antes do conteudo after.
+    </div>
+```
+- NO CSS
+
+```css
+    div::after {
+        content: "pseudo-elemento ::after";
+        color: red;
+    }
+```
+- Com esse exemplo o texto dentro do ```content```aparece depois do texto descrito na tag ```<div>```.

@@ -11,7 +11,10 @@
             background-color: #F2FFFC;
             line-height: 1.5;
         }
-
+        main {
+            float: left;
+            width: calc(100% - 0.9 * 300px);
+        }
         main h1 {
             font-size: 300%;
             background-color: rgb(120, 30, 60);
@@ -34,7 +37,7 @@
             clear: right;
             box-sizing: border-box;
             position: relative;
-            top: 211px;
+            top: 280px;
             background-image: linear-gradient(45deg,
             transparent,
             transparent 14px,
@@ -47,7 +50,7 @@
         }
         aside, img {
             float: right;
-            width: 15%;
+           width: calc(0.9 * 300px);
             border-bottom: 10px solid black;
             border-left: 10px solid black;
         }
@@ -104,10 +107,7 @@
             margin-right: auto;
             width: 720px;
         }
-        main {
-            float: left;
-            width: 85%;
-        }
+
         .minha-foto {
             position: absolute;
             top: 0;
@@ -120,6 +120,8 @@
             padding-bottom: 100px;
 
         }
+
+
         /* Formulario */
   
         legend,
@@ -179,4 +181,26 @@
         button:hover,
         button:focus {
             background-color: #8C1D3D;
+        }
+        label[for="nome"] {
+            position: relative;
+        }
+
+        label[for="nome"]:after {
+            content: "";
+            background-image: url(../img/usuario.png);
+            background-size: 50% 50%;
+            background-position: center;
+            background-color: #666;
+            background-repeat: no-repeat;
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: 100%;
+            left: 0;
+        }
+        #nome {
+            width: calc(100% - 2em);
+            position: relative;
+            left: 2em;
         }

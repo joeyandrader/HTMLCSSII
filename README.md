@@ -1060,3 +1060,122 @@ input[type="checkbox"]:checked {
 ```
 
 - Assim o servidor vai receber dados do nosso ```<input>``` corretamente.
+
+
+> Temos outro tipo para texto que é o ```<textarea>```
+
+- O ```TextArea``` , cria uma caixa de texto podendo editar o tamanho dela com ```cols=""``` que é "Colunas" e ```rows=""``` que são "Linhas".
+- 
+```html
+    <textarea cols="30" rows="10"></textarea>
+``` 
+- O texto area é automaticamente gerado no elemento web no navegador, sem precisar por nada entre as tag ```textarea```.
+
+#### 10.2.1 placeholder.
+
+> Podemos deixar noss input bem interessante, passando valores para nosso campo de digitação, ultilizando o ```placeholder```.
+
+```html
+    <form>
+        <label for="nome">Nome:</label>
+        <input id="nome" name="nome" placeholder="Seu nome aqui">
+    </form>
+```
+- Ficaria assim. E ao Digitar esse nome automaticamente some.
+<p align="center">
+<img src="http://i.imgur.com/wmlQZIW.jpg" alt="exemplo de borda Elipticas">
+ </p>
+
+ #### 10.2.2 Botoes input
+
+ >Podemos por botoes de confirmações em nossos formularios usando também o ```<input>``` juntamente com o campo ```type=""```.
+
+ ```html
+
+    <input type="submit" value="Enviar">
+
+            ou
+
+     <input type="button" value="Enviar">
+
+ ```
+ - Essa forma fara um botão com um texto centralizado de ```Enviar```
+ 
+ > so que essa forma de botão feita pelo ```<input>``` limita qualquer alteração para ```CSS```. Então podemos usar uma tag mais especifica para isso, na qual podemos por qualquer tipo de estilo a ela. É a tag ```<button>```.
+
+  ```html
+
+    <button type="submit">
+        Enviar
+    </button>
+ ```
+
+ - Assim podemos por qualquer Tipo de estilo a esse botão com o ```CSS```.
+ 
+ #### 10.2.3 required e autofocus
+
+ > Quando temos um formulario que precisamos obrigar o usuario a informar podemos atribuir ao nosso ```input``` um atributo para obrigar o usuario a preencher aquele campo. É a tag ```"required"```. 
+
+ ```html
+     <form>
+        <label for="nome">Nome:</label>
+         <input id="nome" name="nome" placeholder="Seu nomeaqui" required>
+    </form>
+```
+
+- Assim o navegador informa ao nosso usuario caso ele nao tiver preenchido o campo ```nome```, e so deixa passar a validação caso tenha preenchido.
+
+
+> O ```autofocus``` é um outro atributo bastante interessante. Ele funciona da seguinte forma.
+
+- Quando Redirecionamos o usuario ao nosso formulario, queremos por exemplo fazer com que o primeiro campo que ele possa preencher sem que precise ele clicar nele é o do ```input name``` , para isso colocamos assim:
+
+ ```html
+     <form>
+        <label for="nome">Nome:</label>
+         <input id="nome" name="nome" placeholder="Seu nomeaqui" required autofocus>
+    </form>
+```
+
+- Assim o Navegador ja vai deixar selecionado o campo para o usuario digitar seu nome.
+
+#### 10.2.4 fieldset e legend
+
+> Podemos agrupar nossos formularios para deixar mais semântica o nosso HTML. usamos entao os atributos ```fieldset``` e ```legend```.
+
+ ```html
+     <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input id="nome" name="nome" placeholder="Seu nomeaqui" required autofocus>
+         </fieldset>
+    </form>
+```
+#### 10.2.5 pattern
+
+> Esse atributo é muito importante para o nosso formulario, ate mesmo para criaçoes de senhas onde possa da problemas em nosso servidor com caracteres especiais. Assim podemos limitar o nosso usuario, ou melhor obrigar ele a digitar somento aqueles caracteres que queremos.
+
+- Para isso podemos por o seguinte comando
+
+ ```html
+     <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input id="nome" name="nome" placeholder="Seu nomeaqui" required autofocus pattern="[A-Za-z0-9]{8,}">
+         </fieldset>
+    </form>
+```
+- Os caracteres dentro dos cochetes informa que queremos apenas letras de A ate Z minusculas ou maiusculas, numeros de 0 a 9. Já os que estão dentro de chaves, significa que queremos que o nosso usuario pelomenos digite ate 8 caracteres.
+
+> Podemos descrever o ```pattern```, para informar o nosso usuario que caracteres é preciso por ali.
+> 
+
+```html
+
+<input pattern="[0-9]*" title="Preencha somente com números">
+
+```
+
+- Então o navegador vai mostrar a sua mensagem padrao, e em seguida abaixo mostra a nossa mensagem que está escrito em ```title```.

@@ -1002,7 +1002,7 @@ input[type="checkbox"]:checked {
 - ```type="checkbox"``` > Refere-se a uma Caixa de marcação.
 - ```type="password"``` > Refere-se a uma Caixa de texto para senhas.
 
-- Entre varios outros, que pode consultar aqui <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Mozzila Firefox Developer Inputs</a>
+- Entre varios outros, que pode consultar aqui <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input">Mozzila Firefox Developer Inputs</a>
 
 
 ### 10.2 Input's

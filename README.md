@@ -980,3 +980,83 @@ input[type="checkbox"]:checked {
     }
 ```
 - Com esse exemplo o texto dentro do ```content```aparece depois do texto descrito na tag ```<div>```.
+
+# Aula 10 : Formulários
+
+> Podemos Criar Formularios para nosso Web Site, Seja para inserir contato direto, ou para cadastro de usuarios e etc.
+
+> Para isso Usamos as Tag ```<form>```, ```<label>``` e ```<input>```.
+
+### 10.1 Tipos de Formularios
+
+> Para definir um tipo de input precisamos passar o atributo que queremos
+
+```html
+<input type="" >
+```
+
+- ```type="text"``` > Refere-se a uma Caixa de texto.
+- ```type="radio"``` > Refere-se a um circulo de marcação.
+- ```type="email"``` > Refere-se a um campo para email.
+- ```type="submit"``` > Refere-se a um Botão de validação.
+- ```type="checkbox"``` > Refere-se a uma Caixa de marcação.
+- ```type="password"``` > Refere-se a uma Caixa de texto para senhas.
+
+- Entre varios outros, que pode consultar aqui <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Mozzila Firefox Developer Inputs</a>
+
+
+### 10.2 Input's
+
+> A tag ```<form>``` é a base principal para se iniciar um formulario.
+
+```html
+    <form>
+        ....
+    </form>
+```
+
+- Fornece Entrada para o usuario.
+
+> Em seguida podemos atribuir o ```<label>``` e o ```<input>```.
+ 
+```html
+    <form>
+      <label>
+          ...
+          <input>
+      </label>
+    </form>
+```
+
+- a Tag ```<label>``` serve para identificar do que se trata aquela tag ```<input>```. Assim atribuindo uma forma especifica que seria o ```(for="")```. So que antes, na tag ```<input>``` é preciso definir um ```(id="")```.
+
+```html
+    <form>
+      <label for="nome">
+          Digite seu nome:
+          <input type="text" id="nome">
+      </label>
+    </form>
+```
+- Assim o navegador identifica no qual aquele ```<input>``` se refere.
+
+- Alem do ```for```, temos também o atribudo ```name```, no qual é sempre importante ter na maioria dos ```inputs```.
+
+```html
+    <label>
+        <input type="radio" name="assunto">
+        Consultoria
+    </label>
+```
+- O navegador vai saber que aquilo se trata a um rotulo do input. E assim se tiver multiplos assuntos usando a tag ```type="radio"``` o navegador vai selecionar apenas um marcador daquele tema especifico ```"assunto"```.
+
+ - So que precisamos também alem do ```name=""```, informar ao nosso servidor qual tipo de ```"assunto"```estamos se referindo. Por isso usamos mais um atribudo do ```<input>``` que seria o ```value=""```. 
+ 
+```html
+    <label>
+        <input type="radio" name="assunto" value="consultoria">
+        Consultoria
+    </label>
+```
+
+- Assim o servidor vai receber dados do nosso ```<input>``` corretamente.

@@ -120,3 +120,63 @@
             padding-bottom: 100px;
 
         }
+        /* Formulario */
+  
+        legend,
+        label[for="msg"] {
+            font-weight: bold;
+            margin-top: 1em;
+        }
+        label[for] {
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            padding: .25em .5em;
+            width: 100%;
+            box-sizing: border-box;
+            border:1px solid #CCC;
+        }
+        fieldset > fieldset {
+            display: inline;
+        }
+
+
+        /* Esconde a opção do Texto do Input outros */
+        input[name="Outro-Assunto"] {
+            width: auto;
+            display: none;
+        }
+        input[value="outros"]:checked ~ input {
+            width: auto;
+            display: inline;
+        }
+    
+            /* ~ */
+
+        input:focus,
+        textarea:focus {
+            background:#FFD;
+        }
+        input:invalid {
+            box-shadow: 0 0 3px red;
+        }
+        button {
+            border: 0;
+            padding: .8em 1em;
+            margin: .8em .5em;
+            font-family: "Open Sans Condensed", sans-serif;
+            background-color: #3C1D3D;
+            color: white;
+            font-size: .8em;
+            position: relative;
+            left: 20em;
+        }
+        button:hover,
+        button:focus {
+            background-color: #8C1D3D;
+        }

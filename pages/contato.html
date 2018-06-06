@@ -18,26 +18,36 @@
     <h1>Contato</h1>
     <div class="container">
       <form>
-          <label for="nome">Nome:</label>
-          <input id="nome" name="nome" placeholder="Digite seu nome...">
-          <label for="Email">Email:</label>
-          <input id="Email" name="e-mail" placeholder="Digite seu e-mail...">
+          <fieldset>
+            <legend>Dados Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input id="nome" name="nome" placeholder="Digite seu nome..." autofocus>
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="e-mail" placeholder="Digite seu e-mail..." required>
+        </fieldset>
+        <fieldset>
+            <legend>Tipo de Assunto</legend>
+                <label>
+                    <input type="radio" name="assunto" value="consult">
+                    Consultoria
+                </label>
 
-            
-            <label>
-                <input type="radio" name="assunto" value="consult">
-                Consultoria
-            </label>
+                <label>
+                    <input type="radio" name="assunto" value="blog">
+                    Blog
+                </label>
 
-            <label>
-                <input type="radio" name="assunto" value="blog">
-                Blog
-            </label>
-
-            <label>
-                <input type="radio" name="assunto" value="outros">
-                Outros
-            </label>
+                <label>
+                    <input type="radio" name="assunto" value="outros">
+                    Outros
+                </label>
+        </fieldset>
+        <fieldset>
+            <legend>Campo da Mensagem</legend>
+            <label for="msg">Mensagem:</label>
+            <textarea id="msg" name="mensagem" cols="30" rows="6"></textarea>
+        </fieldset>
+            <button type="submit">Enviar Mensagem</button>
       </form>
     </div>
     </main>

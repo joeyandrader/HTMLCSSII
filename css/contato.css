@@ -182,25 +182,29 @@
         button:focus {
             background-color: #8C1D3D;
         }
-        label[for="nome"] {
-            position: relative;
-        }
-
-        label[for="nome"]:after {
+        .com-icone::after {
             content: "";
-            background-image: url(../img/usuario.png);
+            width: 2em;
+            height: 1.8em;
+            background-color: #8C1D3D;
             background-size: 50% 50%;
             background-position: center;
-            background-color: #666;
             background-repeat: no-repeat;
-            width: 2em;
-            height: 2em;
             position: absolute;
             top: 100%;
             left: 0;
         }
-        #nome {
-            width: calc(100% - 2em);
+        .com-icone {
+            position: relative;
+        }
+        .com-icone + input {
             position: relative;
             left: 2em;
+            width: calc(100% - 2em);
+        }
+        .com-icone[for="nome"]::after {
+            background-image: url(../img/usuario.png);
+        }
+        .com-icone[for="Email"]::after {
+            background-image: url(../img/email.png);
         }

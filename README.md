@@ -1179,3 +1179,7 @@ input[type="checkbox"]:checked {
 ```
 
 - Então o navegador vai mostrar a sua mensagem padrao, e em seguida abaixo mostra a nossa mensagem que está escrito em ```title```.
+
+# Aula 11 : Cálculos com CSS
+
+> Com a propriedade ```calc()``` conseguimos fazer calculos em nosso CSS para melhorar a flexibilidade do nosso site. Melhorando seu responsive.

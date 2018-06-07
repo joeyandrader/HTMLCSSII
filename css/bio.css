@@ -224,3 +224,10 @@
 				border-spacing: .25em;
 				margin: 1em 0;
 			}
+			.habilidades [colspan] {
+				text-align: center;
+				font-style: italic;
+			}
+			.habilidades [rowspan] {
+				vertical-align: middle;
+			}

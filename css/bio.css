@@ -41,6 +41,20 @@
 				margin-right: .2ch;
 				line-height: 1;
 			}
+
+			h1 {
+				animation: aparece 2s ease-out;
+			}
+
+			@keyframes aparece {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+
 			blockquote {
 				background-color: #D9E5E3;
 				padding: 1em;
@@ -48,12 +62,33 @@
 				width: 30ch;
 				margin: 1em 2em;
 				box-sizing: border-box;
+				transition: transform 2s  linear, box-shadow 1s ease-in-out;
+				transition-delay: 0s, 1s;
+				animation: quica 1s infinite;
+				animation-direction: alternate;
+				animation-timing-function: ease-in;
+				position: relative;
+			}
+			@keyframes quica {
+				from {
+					top:0;
+				}
+				90% {
+					transform: rotate(-2deg);
+				}
+				95% {
+					transform: rotate(2deg);
+				}
+				to {
+					top: 1em;
+				}
 			}
 			blockquote p {
 				position: relative;
 			}
 			blockquote:hover {
 				box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+				animation-play-state: paused;
 			}
 			blockquote:focus {
 				box-shadow: 0 0 0 99999px rgba(0,0,0,.8);

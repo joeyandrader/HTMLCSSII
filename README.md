@@ -1182,10 +1182,90 @@ input[type="checkbox"]:checked {
 
 # Aula 11 : Cálculos com CSS
 
-> Com a propriedade ```calc()``` conseguimos fazer calculos em nosso CSS para melhorar a flexibilidade do nosso site. Melhorando seu responsive.
+> Com a propriedade ```calc()``` conseguimos fazer calculos em nosso CSS para melhorar a flexibilidade do nosso site. 
 
+>Os operadores matematicos validos são :  ```+ (soma), - (subtração), * (multiplicação) e / (divisão)```.
 
+- A forma correta de se fazer um calc: 
+
+```css
+    calc(50% + 5em - 255px / 2)
+```
+- Nota os espaço entre os sinais.
+- Errado: calc(50%+5em).
+- Certo: calc(50% + 5em).
 
 # Aula 12 : Tabelas semânticas
 
 > Uma tag bastante interessante onde podemos criar tabelas para o nosso site de varias formas interessante, com a tag ```<table>``` . 
+
+- Para iniciar uma Tabela no nosso site fazemos o seguinte:
+
+```html
+    <table>
+        <tr>
+            <td>...</td>
+        </tr>
+    </table>
+```
+- ```<tr>``` é a linha da tabela.
+- ```<td>``` é a coluna da tabela.
+
+> Para iniciar um cebeçalho na nossa ```<table>``` podemos deixar mais semantico destacando-a com a tag ```<thead>```, ```<th>```.
+
+```html
+    <table>
+        <thead>
+            <tr>
+                <th>Titulo, Cabeçalho</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Conteudo</td>
+            </tr>
+        </tbody>
+    </table>
+```
+- O ```<tbody>``` , define o corpo da tabela , o conteudo.
+
+> Temos outro elemento onde podemos usar no table. Quando queremos que uma celula da tabela ocupa quantas linhas ou colunas podemos usar o ```rowspan``` e ```colspan```.
+
+
+- Usando a propriedade ```colspan```.
+```html
+    <table>
+    <tr>
+        <td colspan="2">Grande</td>
+    </tr>
+    <tr>
+        <td>Pequena</td>
+        <td>Pequena</td>
+    </tr>
+</table>
+```
+- Ficaria
+- 
+<p align="center">
+<img src="http://caelum-online-public.s3.amazonaws.com/avancando-html-css/tabela-simples-colspan.png" alt="exemplo de borda Elipticas" width="200" height="60">
+ </p>
+
+ - Quando usamos a propriedade rowspan, não precisamos colocar um ```<td>``` para aquela coluna na linha seguinte. Por exemplo:
+
+ ```html
+    <table>
+    <tr>
+        <td rowspan="2">Coluna da esquerda</td>
+        <td>Coluna da direita</td>
+    </tr>
+    <tr>
+        <td>Coluna da direita</td>
+    </tr>
+</table>
+ ```
+
+ <p align="center">
+<img src="http://caelum-online-public.s3.amazonaws.com/avancando-html-css/tabela-simples-rowspan.png" alt="exemplo de borda Elipticas" width="200" height="60">
+ </p>
+
+ # Aula 13: Transições e animações.

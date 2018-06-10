@@ -1269,3 +1269,104 @@ input[type="checkbox"]:checked {
  </p>
 
  # Aula 13: Transições e animações.
+
+ > Podemos por animaçoes em nossos elementos HTML.. seja em uma box div , em um link , tabelas e etc.
+
+ - Definimos a propriedade de animação ao elemento que desejar na classe CSS. Com a propriedade ```transition```.
+ 
+ ```css
+
+    .citacao-bio {
+        ...
+        transition: 1s;
+    }
+
+     - Significa que animação ocorrerar em 1segundo
+```
+
+- Podemos controlar as animação por cada elemento, Exemplo:
+
+```css
+    .citacao-bio {
+        ...
+        transition: transform 1s, box-shadow 2s;
+    }
+
+ - a primeira ocorrerar em 1s, e a segunda em 2s.
+``` 
+
+- Podemos controlar o inicio das animações .
+
+```css
+    .citacao-bio {
+        ...
+        transition: transform 1s, box-shadow 2s;
+        transition-delay: 0s, 1s;
+    }
+
+    - Nesse caso o transform ocorrerar normalmente , e o box-shadow vai iniciar 1s depois.
+```
+
+> Alem disso podemos melhorar a velocidade e suavização das nossas animaçoes .
+
+- ```ease``` : especifica um efeito de transição com um início lento, depois rápido e termina lentamente
+- ```linear``` :  especifica um efeito de transição com a mesma velocidade do início ao fim
+- ```ease-in``` :  especifica um efeito de transição com um início lento
+- ```ease-out``` : especifica um efeito de transição com um final lento
+- ```ease-in-out``` : especifica um efeito de transição com início e fim lentos
+
+```css
+    .citacao-bio {
+        ...
+        transition: transform 1s linear, box-shadow 2s ease-in;
+        transition-delay: 0s, 1s;
+    }
+```
+
+### 13.1 Animação especificada.
+
+> Podemos especificar uma animação usando ```"@"```.
+
+```css
+    h1 {
+        animation: aparece 2s;
+    }
+
+    @keyframes aparece {    
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+```
+
+- O  ```"@keyframes"``` permite espeficiar o que acontece em cada framde da animação. Nesse caso apenas queremos dizer o que acontecerá no primeiro frame (0%) e no último frame (100%) dela.
+
+>A propriedade de animação também permite modificar a aceleração, utilizando ease-in, ease-out e ease-in-out.
+
+- Podemos deixar uma animação repetir por varias vezes sem parar, ou seja infinitas vezes.
+
+> Usando a propriedade ```infinite```.
+
+```css
+    .citacao-bio {
+        ...
+        position: relative;
+        animation: quica 1s infinite;
+    }
+```
+
+- E quando queremos pausar a animação podemos usar o seguinte:
+
+```css
+.saudacao:hover em {
+    animation-play-state: paused;
+}
+```
+
+- Tipo ao passar o mouse em cima do elemento com animação ele irá pausar.
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations"> Mais informações de animação e suas propriedades</a>
+

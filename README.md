@@ -1183,3 +1183,9 @@ input[type="checkbox"]:checked {
 # Aula 11 : Cálculos com CSS
 
 > Com a propriedade ```calc()``` conseguimos fazer calculos em nosso CSS para melhorar a flexibilidade do nosso site. Melhorando seu responsive.
+
+
+
+# Aula 12 : Tabelas semânticas
+
+> Uma tag bastante interessante onde podemos criar tabelas para o nosso site de varias formas interessante, com a tag ```<table>``` . 

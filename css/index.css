@@ -123,14 +123,14 @@
                     padding-bottom: 1em;
                 }
                 .trabalhos ul {
-                    overflow: hidden;
                     border: 10px solid black;
                     margin-bottom: 3em;
+                    display: flex;
                 }
                 .trabalhos li {
-                    float: left;
-                    width: 33.333%;
+
                     text-shadow: 2px 2px 2px black;
+                    flex: 1;
                 }
                 .trabalhos img {
                     width: 100%;

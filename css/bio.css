@@ -10,6 +10,9 @@
 			body {
 				background-color: #F2FFFC;
 				line-height: 1.5;
+				display: flex;
+				flex-wrap: wrap;
+				display: block;
 			}
 
 			main h1 {
